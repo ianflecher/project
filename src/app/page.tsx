@@ -1,6 +1,7 @@
 "use client";
 import Title from "../../component/title";
 import { useRouter } from "next/navigation";
+import { MouseEvent } from "react";
 import Image from "next/image";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
     router.push("/products");
   };
 
-  const handleAdminClick = (e:any) => {
+  const handleAdminClick = (e: MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     router.push("/admin");
   };
