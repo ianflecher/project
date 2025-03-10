@@ -1,6 +1,7 @@
 "use client";
 import Title from "../../component/title";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -10,7 +11,7 @@ export default function Home() {
   };
 
   const handleAdminClick = (e:any) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     router.push("/admin");
   };
 
@@ -21,7 +22,7 @@ export default function Home() {
       onClick={handleClick}
     >
       <div className="absolute top-4 right-4 cursor-pointer" onClick={handleAdminClick}>
-        <img src="/admin.png" alt="Admin" className="w-12 h-12" />
+        <Image src="/admin.png" alt="Admin" width={48} height={48} />
       </div>
       <div className="text-black">
         <Title text="Food for Life" />
